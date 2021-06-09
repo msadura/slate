@@ -1,3 +1,12 @@
+## Why fork?
+
+In Sling we switch original window.Promise implementation with \$q provided from angular.
+Because of that slate editor's cursor lags on fast typing. To workaround that, we restore original Promise for slate:
+
+```
+const Promise = typeof window !== 'undefined' ? (window.__Promise || window.Promise) : Promise;
+```
+
 <p align="center">
   <a href="#"><img src="./docs/images/banner.png" /></a>
 </p>

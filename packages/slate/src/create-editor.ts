@@ -15,6 +15,10 @@ import {
 } from './'
 import { DIRTY_PATHS, FLUSHING } from './utils/weak-maps'
 
+// @ts-ignore
+const Promise =
+  typeof window !== 'undefined' ? window.__Promise || window.Promise : Promise
+
 /**
  * Create a new Slate `Editor` object.
  */

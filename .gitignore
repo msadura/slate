@@ -4,7 +4,7 @@
 .idea/
 *.tsbuildinfo
 build/
-dist/
+# dist/
 lib/
 node_modules/
 packages/*/yarn.lock
